@@ -7,12 +7,14 @@ steps:
   inputs:
     SonarCloud: 'SonarCloud'
     organization: 'guptadeepak'
-    scannerMode: 'MSBuild'
     projectKey: 'webapp_youtube'
+    scannerMode: 'Other'
 - task: Maven@3
   displayName: 'Maven app/pom.xml'
   inputs:
     mavenPomFile: 'app/pom.xml'
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
     codeCoverageToolOption: Cobertura
 
 - task: CopyFiles@2
