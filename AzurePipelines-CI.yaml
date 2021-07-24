@@ -9,10 +9,13 @@ steps:
     organization: 'guptadeepak'
     projectKey: 'webapp_youtube'
     scannerMode: 'Other'
+
+
 - task: Maven@3
   displayName: 'Maven app/pom.xml'
   inputs:
     mavenPomFile: 'app/pom.xml'
+    javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
     codeCoverageToolOption: Cobertura
