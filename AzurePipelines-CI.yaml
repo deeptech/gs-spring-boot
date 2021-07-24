@@ -3,6 +3,11 @@ pool:
   demands: maven
 
 steps:
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'guptadeepak'
+    scannerMode: 'Other'
 - task: Maven@3
   displayName: 'Maven app/pom.xml'
   inputs:
