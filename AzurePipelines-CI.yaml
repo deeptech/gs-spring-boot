@@ -17,7 +17,7 @@ steps:
     mavenPomFile: 'app/pom.xml'
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: true
-    sqMavenPluginVersionChoice: 'latest'
+    sqMavenPluginVersionChoice: 'pom'
     codeCoverageToolOption: Cobertura
 
 - task: CopyFiles@2
