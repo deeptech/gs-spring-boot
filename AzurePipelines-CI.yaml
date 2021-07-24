@@ -19,7 +19,7 @@ steps:
     jdkVersionOption: 1.11
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: pom
-    codeCoverageToolOption: Cobertura
+    codeCoverageToolOption: JaCoCo
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
